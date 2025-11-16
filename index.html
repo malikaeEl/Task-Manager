@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/7d074f70c9.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <h1>Task Manager <i class="fa-solid fa-circle-check" style="color: #0f9d0d;"></i></h1>
+        <label >Title:</label>
+        <input type="text" id="title" placeholder="Write a title">
+        <label >Description:</label>
+        <input type="text" id="description" placeholder="Write a description">
+            <label >Priority:</label>
+            <select name="priority" id="priority">
+                <option value="Low" class="Low">Low </option>
+                <option value="Medium" class="Medium">Medium </option>
+                <option value="High" class="High">High </option>
+            </select>
+            <label >Due Date:</label>
+            <input type="date" name="date" id="date">
+            <label >Status:</label>
+             <select name="status" id="status">
+                <option value="pending" class="pending">Pending </option>
+                <option value="completed" class="completed">Completed </option>
+            </select>
+        <button id="btn" type="submit" onclick="CreateTask()">Add Task</button>
+       
+    </header>
+    <main>
+        <section>
+            <h1>Pending tasks</h1> 
+                <div id="pendingtask">
+                </div>
+        </section>
+        <section>
+            <h1>Completed tasks</h1>
+                <div id="completedtask">
+                </div>
+
+        </section>
+
+       
+    </main>
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>
