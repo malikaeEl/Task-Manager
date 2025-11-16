@@ -8,10 +8,14 @@ body{
     font-family: "Roboto", sans-serif;
     background-color: #dadada;
     display: flex;
-    align-items: start;
-    justify-content: space-evenly;
-    column-gap: 0px;
+    align-items: flex-start;
+    justify-content: center;
+    column-gap:20px;
+    flex-wrap: wrap; 
+    align-items: flex-start;
+   
 }
+
 header>h1{
     text-align: center;
 }
@@ -49,13 +53,15 @@ header button{
 }
 
 
-
-/* Style cards */
+/* 
+style the backgrount of the output */
 
 
 main{ 
  width: 50%;
-display: flex;
+  min-width: 300px;
+ display: flex;
+ flex-wrap: wrap;
 justify-content: space-around;
 background-color: white;
 border: 1px solid#0284c7;
@@ -71,7 +77,9 @@ border-radius: 15px;
     background-color: red;
 }
 
-/* !!!!!!!!!!!!!!!!!!!!!! */
+
+/* Style the cards */
+
 
 .task{
     width:  190px;
@@ -91,17 +99,17 @@ border-radius: 15px;
 .titleresult .descriptionresult{
    overflow-wrap: break-word;  
 }
-#pendingtask{
+#pendingtask,#completedtask{
+     border:none;
     border-radius: 15px;
     color: white;
-    background-color: #F88379;
+    
    
 
 }
+#pendingtask{
+    background-color: #F88379;
+}
 #completedtask{
-    border:none;
-    border-radius: 15px;
-    color :white;
     background-color: #0BDA51;
-  
 }

@@ -1,7 +1,7 @@
 var db=[];
 
 
-
+// Create tasks
 function CreateTask(){
 
     var task = {
@@ -12,10 +12,14 @@ function CreateTask(){
     status:document.getElementById("status").value,
     }
     db[db.length]=task
+      document.getElementById('title').value=''
+     document.getElementById('description').value=''
+
  
    ReadTask();
 
 }
+// Read tasks
 
 function ReadTask() {
     document.getElementById("pendingtask").innerHTML = '';
@@ -48,6 +52,8 @@ function ReadTask() {
         }
     }
 }
+
+// Edit task choosen
 function edittask(i){
     document.getElementById('title').value = db[i].title;
     document.getElementById('description').value = db[i].description; 
@@ -73,11 +79,6 @@ function  handeledit(index){
   
      document.getElementById('title').value=''
      document.getElementById('description').value=''
-     document.getElementById("priority").value=''
-     document.getElementById("date").value=''
-     document.getElementById("status").value =''
-
-
     document.getElementById('btn').innerHTML = 'Add Task'
 
     document.getElementById('btn').onclick = function () {
@@ -85,6 +86,11 @@ function  handeledit(index){
     }
     ReadTask()
 }
-function DeleteTask(index){
+
+// Delete task choosen
+
+function DeleteTask(u){
+    db.splice(u,1)
+    ReadTask()
        
 } 
