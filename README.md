@@ -1,48 +1,29 @@
-# Task Manager App
+# Task Manager
 
-A simple **Task Manager** web application built with **HTML, CSS, and JavaScript**. It allows you to **add, edit, and delete tasks** and categorize them as **Pending** or **Completed**.
+This is a simple Task Manager web app built with **HTML**, **CSS**, and
+**JavaScript**.\
+It allows you to create, edit, delete, and store tasks using
+**LocalStorage**.
 
 ## Features
 
-- **Add tasks** with:
-  - Title
-  - Description
-  - Priority (Low, Medium, High)
-  - Due Date
-  - Status (Pending / Completed)  
-- **Edit tasks** directly from the task list.  
-- **Delete tasks** easily.  
-- Tasks are displayed in separate **Pending** and **Completed** sections.  
+-   Add tasks with title, description, priority, date, and status\
+-   Edit existing tasks\
+-   Delete tasks\
+-   Tasks automatically saved in LocalStorage\
+-   Tasks displayed in two sections: Pending & Completed
+
+## Files
+
+-   **index.html** -- Structure of the app\
+-   **style.css** -- Styling\
+-   **script.js** -- Functionality and LocalStorage logic
 
 ## How to Use
 
-1. Open `index.html` in a browser.  
-2. Fill in the task details in the form.  
-3. Click **Add Task** to add the task.  
-4. Tasks will appear in **Pending** or **Completed** section based on status.  
-5. Click the **✏️ Edit** button to modify a task.  
-6. Click the **🗑️ Delete** button to remove a task.  
+1.  Fill in the input fields.\
+2.  Click **Add Task**.\
+3.  View tasks under Pending or Completed.\
+4.  Use the edit and delete buttons to modify tasks.
 
-## Technologies Used
-
-- **HTML5** – Structure of the app.  
-- **CSS3** – Styling using Flexbox and basic design.  
-- **JavaScript** – Task management functionality.  
-- **Font Awesome** – Icons for edit, delete, and status.  
-
-## File Structure
-
-```
-/task-manager
-│
-├─ index.html        # Main HTML page
-├─ style.css         # Styles for the app
-├─ script.js         # JavaScript functionality
-└─ README.md         # Project description
-```
-
-## Notes
-
-- Tasks are stored **only in memory** (`var db=[]`), so they **disappear on page reload**.  
-- The app separates tasks by status visually for better organization.  
-- Works on modern browsers.
+Enjoy building and customizing your task manager!

@@ -1,5 +1,9 @@
-var db=[];
-
+var db;
+if(localStorage.tasks!=null){
+    db=JSON.parse(localStorage.tasks);
+}else{
+    db=[];
+}
 
 // Create tasks
 function CreateTask(){
@@ -11,7 +15,10 @@ function CreateTask(){
     date:document.getElementById("date").value,
     status:document.getElementById("status").value,
     }
-    db[db.length]=task
+    db[db.length]=task;
+    var value=localStorage.setItem("tasks",JSON.stringify(db));
+    console.log(value);
+
       document.getElementById('title').value=''
      document.getElementById('description').value=''
 
@@ -52,6 +59,7 @@ function ReadTask() {
         }
     }
 }
+ReadTask()
 
 // Edit task choosen
 function edittask(i){
@@ -84,6 +92,7 @@ function  handeledit(index){
     document.getElementById('btn').onclick = function () {
          CreateTask()
     }
+    localStorage.setItem("tasks",JSON.stringify(db))
     ReadTask()
 }
 
@@ -91,6 +100,7 @@ function  handeledit(index){
 
 function DeleteTask(u){
     db.splice(u,1)
+     localStorage.setItem("tasks",JSON.stringify(db))
     ReadTask()
        
-} 
+}

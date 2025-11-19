@@ -50,6 +50,7 @@ header button{
     border-radius: 15px;
     background-color: #0284c7;
     margin-top: 20px;
+    cursor:pointer;
 }
 
 
@@ -95,6 +96,7 @@ border-radius: 15px;
     height: 30px;
     border: none;
     border-radius: 15px;
+    cursor:pointer;
 }
 .titleresult .descriptionresult{
    overflow-wrap: break-word;  
